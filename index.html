@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Sarah | Author &amp; Speaker</title>
+<meta name="description" content="Psychologist, essayist, author of Discovery Journal for First-Time Moms, and creator of The Book Shrink.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#FAF8F5;--ink:#1F1D1A;--plum:#3B2338;--berry:#A12C52;--line:#E6DFD8;--soft:#F3EDE8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:1.125rem;line-height:1.7}
+  a{color:var(--berry)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+  .label{font-family:"IBM Plex Mono",monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--berry)}
+  h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;color:var(--plum);line-height:1.1}
+  h1{font-size:clamp(2.6rem,6vw,4.4rem)}
+  h2{font-size:clamp(2rem,4vw,2.8rem);margin:.4rem 0 1.5rem}
+  h3{font-size:1.6rem;margin-bottom:.5rem}
+  nav{position:sticky;top:0;background:rgba(250,248,245,.95);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:.9rem;padding-bottom:.9rem;gap:1rem;flex-wrap:wrap}
+  nav .name{font-family:"Instrument Serif",serif;font-size:1.5rem;color:var(--plum);text-decoration:none}
+  nav ul{display:flex;gap:1.25rem;list-style:none;flex-wrap:wrap}
+  nav ul a{font-family:"IBM Plex Mono",monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink);text-decoration:none}
+  nav ul a:hover{color:var(--berry)}
+  section{padding:5rem 0;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:center}
+  .hero p.sub{margin:1.5rem 0 2rem;font-size:1.2rem}
+  .portrait{aspect-ratio:4/5;background:var(--soft);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#8a7d76;font-style:italic;overflow:hidden}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+  .pills{display:flex;gap:.75rem;flex-wrap:wrap}
+  .btn{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;padding:.8rem 1.2rem;border-radius:999px;text-decoration:none;border:1.5px solid var(--plum);color:var(--plum);background:transparent;cursor:pointer}
+  .btn.solid{background:var(--plum);color:var(--paper)}
+  .btn:hover{background:var(--berry);border-color:var(--berry);color:var(--paper)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  .callout{background:#fff;border-left:4px solid var(--berry);padding:1.5rem 1.75rem;font-style:italic;margin-top:2rem;border-radius:4px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:1.75rem;display:flex;flex-direction:column;gap:.6rem}
+  .card .btn{align-self:flex-start;margin-top:auto}
+  .card.feature{border-top:4px solid var(--berry)}
+  .shrink{background:var(--plum);color:var(--paper)}
+  .shrink h2,.shrink h3{color:var(--paper)}
+  .shrink .label{color:#E9A9BF}
+  .shrink .btn{border-color:var(--paper);color:var(--paper)}
+  .shrink ul{margin:1rem 0 2rem 1.2rem}
+  form{display:grid;gap:1rem;max-width:640px}
+  label{font-family:"IBM Plex Mono",monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}
+  input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:.75rem;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);margin-top:.35rem}
+  textarea{min-height:160px}
+  .hp{position:absolute;left:-9999px}
+  #form-status{font-style:italic}
+  footer{padding:2.5rem 0;font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:#6b625c}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  @media(max-width:800px){.hero .wrap,.two{grid-template-columns:1fr}.cards{grid-template-columns:1fr}section{padding:3.5rem 0}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="name" href="#top">Dr. Sarah</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#bookshrink">The Book Shrink</a></li>
+    <li><a href="#workshops">Workshops</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<!-- 1. HERO -->
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <p class="label">Author · Essayist · Speaker</p>
+    <h1>Writing into the Unsaid: Power, Caretaking, and the Stories That Shape Us.</h1>
+    <p class="sub">Psychologist, essayist, author of <em>Discovery Journal for First-Time Moms</em>, and creator of <em>The Book Shrink</em>. Exploring women's anger, maternal labor, and cultural assumptions on the page and in life.</p>
+    <div class="pills">
+      <a class="btn solid" href="#writing">Explore Books &amp; Essays</a>
+      <a class="btn" href="#workshops">Workshops &amp; Speaking</a>
+      <a class="btn" href="https://thebookshrink.com" target="_blank" rel="noopener">Visit The Book Shrink ↗</a>
+    </div>
+  </div>
+  <!-- PHOTO: replace this div's text with <img src="portrait.jpg" alt="Dr. Sarah"> -->
+  <div class="portrait">Your portrait goes here</div>
+</div></section>
+
+<!-- 2. ABOUT -->
+<section id="about"><div class="wrap">
+  <p class="label">About the Author</p>
+  <h2>A developmental ear for the stories we live inside.</h2>
+  <div class="two">
+    <div>
+      <p>Sarah is a psychologist, writer, and author examining how we internalize cultural rules around gender, anger, and caretaking. Beginning her career in child development before specializing in adult therapy and collaborative assessment, she brings a keen developmental ear to essays and fiction.</p>
+      <p style="margin-top:1rem">Her writing explores maternal domestic inequity and emotional management. Sarah is the author of <em>Discovery Journal for First-Time Moms</em> and the founder of <em>The Book Shrink</em>, where she reviews contemporary fiction through a clinical power lens.</p>
+    </div>
+    <div>
+      <p>For years she led therapist training groups on gender, maternal caretaking, and women's anger. Her writing looks at how women learn to manage and placate rather than risk confrontation, and asks who in our culture is granted permission to be furious.</p>
+      <div class="callout">"I wrote my first children's book at age nine, and my grandmother helped me try to get it published. She took my words seriously before anyone else did. I've been writing ever since, working through personal memoir, literary essays, and fiction to make sense of who we are."</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 3. BOOKS & WRITING -->
+<section id="writing"><div class="wrap">
+  <p class="label">Books &amp; Writing</p>
+  <h2>On the page.</h2>
+  <div class="cards">
+    <div class="card feature">
+      <p class="label">Published</p>
+      <h3>Discovery Journal for First-Time Moms</h3>
+      <p>Guided reflective prompts helping new mothers navigate identity shifts, postpartum realities, and domestic labor with honesty and grace.</p>
+      <!-- AMAZON: replace # with your Amazon link -->
+      <a class="btn solid" href="#" target="_blank" rel="noopener">Find it on Amazon ↗</a>
+    </div>
+    <div class="card">
+      <p class="label">Essays &amp; Clips</p>
+      <h3>Personal Essays</h3>
+      <p>Literary essays on anger, caregiver guilt, and the cultural scripts women inherit. Honed through workshops including <em>Hippocampus</em>.</p>
+      <!-- ESSAYS: add links here, e.g. <a href="URL">Essay title, Magazine</a> -->
+      <p><em>Published clips coming soon.</em></p>
+    </div>
+    <div class="card">
+      <p class="label">In Progress</p>
+      <h3>Contemporary Literary Fiction</h3>
+      <p>A novel exploring domestic power structures, subtle cultural assumptions, and the interior lives of women navigating family roles and inherited expectations.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- 4. THE BOOK SHRINK -->
+<section class="shrink" id="bookshrink"><div class="wrap">
+  <p class="label">Flagship Platform</p>
+  <h2>The Book Shrink</h2>
+  <div class="two">
+    <p>An independent platform reading contemporary fiction through a clinical psychologist's lens: dissecting assumptions around race, gender, and power rather than publisher marketing hype.</p>
+    <div>
+      <ul>
+        <li>Reviews that read for craft &amp; power</li>
+        <li><em>The Deep Cut</em> spoiler analyses</li>
+        <li>Reader guides for book clubs</li>
+      </ul>
+      <a class="btn" href="https://thebookshrink.com" target="_blank" rel="noopener">Visit The Book Shrink ↗</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- 5. WORKSHOPS -->
+<section id="workshops"><div class="wrap">
+  <p class="label">Workshops &amp; Talks</p>
+  <h2>For writers, therapists, and women's groups.</h2>
+  <div class="cards">
+    <div class="card"><h3>Who Is Allowed to Be Furious?</h3><p>Unpacking women's internalized rules around anger and emotional placation.</p></div>
+    <div class="card"><h3>The Caretaker's Dilemma</h3><p>Exploring maternal labor and boundary differentiation through writing.</p></div>
+    <div class="card"><h3>Narrative as Meaning-Making</h3><p>Journaling and developmental reflection for clinicians and creative writers.</p></div>
+  </div>
+  <p style="margin-top:2rem"><a class="btn solid" href="#contact">Inquire for Workshops</a></p>
+</div></section>
+
+<!-- 6. CONTACT (Formspree) -->
+<section id="contact"><div class="wrap">
+  <p class="label">Connect</p>
+  <h2>Representation, pitches &amp; bookings.</h2>
+  <p style="margin-bottom:2rem">Literary agents, editors, and event hosts: send a note and I'll be in touch.</p>
+  <!-- FORMSPREE: replace YOUR_FORM_ID with the code Formspree gives you -->
+  <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div><label for="name">Name</label><input id="name" name="name" required></div>
+    <div><label for="email">Email</label><input id="email" type="email" name="email" required></div>
+    <div><label for="topic">I'm reaching out about</label>
+      <select id="topic" name="topic">
+        <option>Literary representation</option>
+        <option>Editorial pitch / essay</option>
+        <option>Workshop or speaking</option>
+        <option>Something else</option>
+      </select></div>
+    <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+    <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div><button class="btn solid" type="submit">Send Message</button></div>
+    <p id="form-status" role="status"></p>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© <span id="yr"></span> Dr. Sarah</span>
+  <span><a href="https://thebookshrink.com" target="_blank" rel="noopener">The Book Shrink ↗</a></span>
+</div></footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const f = document.getElementById('contact-form'), s = document.getElementById('form-status');
+  f.addEventListener('submit', async e => {
+    e.preventDefault(); s.textContent = 'Sending…';
+    try {
+      const r = await fetch(f.action, {method:'POST', body:new FormData(f), headers:{Accept:'application/json'}});
+      if (r.ok) { f.reset(); s.textContent = 'Thank you! Your message was sent.'; }
+      else s.textContent = 'Sorry, something went wrong. Please try again later.';
+    } catch { s.textContent = 'Sorry, something went wrong. Please try again later.'; }
+  });
+</script>
+</body>
+</html>
