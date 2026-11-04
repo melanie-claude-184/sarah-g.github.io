@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarah Griesemer | Author</title>
+<meta name="description" content="Sarah Griesemer, psychologist, essayist, and author of Discovery Journal for First-Time Moms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fff;--ink:#141414;--muted:#5c5c5c;--line:#e7e7e7;--accent:#c4362b;--soft:#f6f4f1}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;font-size:17px;line-height:1.7}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.1}
+  .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  .skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem;z-index:99}
+
+  /* Hero */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;background:#222 url(hero.jpg) center 15%/cover no-repeat}
+  .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(0,0,0,.72))}
+  .hero .wrap{position:relative;width:100%;padding-bottom:4rem}
+  .hero h1{font-size:clamp(3rem,9vw,6.5rem)}
+  .hero p{font-size:1.2rem;max-width:620px;margin-top:.75rem;opacity:.95}
+  .credit{position:absolute;right:1rem;bottom:.6rem;font-size:.7rem;opacity:.7}
+
+  /* Tab nav */
+  .tabs{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+  .tabs .wrap{display:flex;gap:2rem;overflow-x:auto;white-space:nowrap}
+  .tabs a{display:block;padding:1.1rem 0;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);border-bottom:3px solid transparent}
+  .tabs a:hover{color:var(--ink);border-color:var(--accent)}
+
+  section{padding:6rem 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(2.2rem,5vw,3.4rem);margin:.5rem 0 1rem}
+
+  /* Product block */
+  .product{display:grid;grid-template-columns:1fr 1.15fr;gap:4rem;align-items:center}
+  .product.flip .cover{order:2}
+  .cover{background:var(--soft);aspect-ratio:2/3;max-width:400px;width:100%;margin:0 auto;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;box-shadow:0 20px 40px rgba(0,0,0,.15)}
+  .cover span{font-family:"Playfair Display",serif;font-size:1.6rem;line-height:1.2}
+  .cover small{display:block;margin-top:1rem;font-family:Inter,sans-serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+  .cover.dark{background:#1b1f2a;color:#f3e9dc}
+  .cover.dark small{color:#b9b0a4}
+  .tagline{font-family:"Playfair Display",serif;font-style:italic;font-size:1.35rem;color:var(--accent);margin-bottom:1rem}
+  .badge{display:inline-block;background:var(--ink);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .7rem;margin-bottom:1rem}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:1rem 2.2rem;border:2px solid var(--ink);cursor:pointer;font-family:Inter,sans-serif}
+  .btn:hover{background:var(--accent);border-color:var(--accent)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{color:#fff}
+  .retail{margin-top:1.5rem;font-size:.9rem;color:var(--muted)}
+  .retail strong{display:block;color:var(--ink);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.25rem}
+  .retail a{margin-right:1rem}
+  .body p+p{margin-top:1rem}
+
+  /* About */
+  .about{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem}
+  .quote{background:var(--soft);padding:2.5rem;font-family:"Playfair Display",serif;font-style:italic;font-size:1.3rem;line-height:1.5;align-self:start;border-top:4px solid var(--accent)}
+
+  /* Book Shrink */
+  .shrink{background:var(--soft)}
+  .shrink .product{grid-template-columns:1fr 1.15fr}
+  .shrink img{box-shadow:0 20px 40px rgba(0,0,0,.12)}
+  .shrink ul{margin:1rem 0 2rem 1.2rem}
+
+  /* Contact */
+  form{display:grid;gap:1.1rem;max-width:640px;margin-top:2rem}
+  label{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+  input,select,textarea{width:100%;font:inherit;padding:.85rem;border:1px solid #cfcfcf;background:#fff;margin-top:.35rem}
+  textarea{min-height:160px}
+  .hp{position:absolute;left:-9999px}
+  #form-status{font-style:italic;color:var(--muted)}
+
+  footer{padding:3rem 0;font-size:.85rem;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+  footer nav a{margin-right:1.25rem;text-decoration:none}
+  footer a:hover{color:var(--accent)}
+
+  @media(max-width:820px){
+    .product,.about,.shrink .product{grid-template-columns:1fr;gap:2.5rem}
+    .product.flip .cover{order:0}
+    section{padding:4rem 0}
+  }
+
+  /* Palette 2: warm terracotta, light backgrounds */
+  :root{--terra:#5E7F7A;--sage2:#6F8061;--dark:#2F2A27;--cream:#FBF6F0;--peach:#E8C9B5}
+  section{border-bottom:none}
+  #novel{background:#E3EBEB}
+  #journal,#about,#contact{background:#F5F1EA}
+  #essays,.shrink{background:#fff}
+  section h2{color:var(--dark)}
+  .eyebrow{color:var(--sage2)}
+  .tagline{color:var(--terra)}
+  .tagline{font-family:Inter,sans-serif;font-style:normal;font-weight:500;font-size:1.1rem;line-height:1.45;color:var(--dark);border-left:3px solid var(--terra);padding-left:1rem;margin:1rem 0 1.25rem}
+  .btn{background:var(--terra);border-color:var(--terra)}
+  .btn:hover{background:var(--dark);border-color:var(--dark)}
+  .btn.ghost{background:transparent;color:var(--terra)}
+  .btn.ghost:hover{color:#fff}
+  .badge{background:var(--sage2)}
+  .cover,#journal img,.shrink img{box-shadow:-18px 28px 45px rgba(47,42,39,.32)!important}
+  .quote{background:#fff;border-top-color:var(--terra)}
+  #about .quote{background:#fff}
+  .tabs a:hover{border-color:var(--terra)}
+  footer{background:var(--dark);color:var(--peach)}
+  footer a{color:#fff}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#fff">Author · Essayist · Psychologist</p>
+    <h1>Sarah Griesemer</h1>
+    <p>Writing into the unsaid: power, caretaking, and the stories that shape us.</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections"><div class="wrap">
+  <a href="#journal">The Journal</a>
+  <a href="#novel">The Novel</a>
+  <a href="#essays">Essays</a>
+  <a href="#about">About</a>
+  <a href="#bookshrink">The Book Shrink</a>
+  <a href="#contact">Contact</a>
+</div></nav>
+
+<main id="main">
+
+<!-- BOOK 1 -->
+<section id="journal"><div class="wrap product">
+  <!-- COVER: replace this div with <img class="cover" src="journal-cover.jpg" alt="Discovery Journal for First-Time Moms cover"> -->
+  <img src="journal-cover.jpg" alt="Self-Discovery Journal for First-Time Moms cover" style="max-width:400px;width:100%;margin:0 auto;box-shadow:0 20px 40px rgba(0,0,0,.15)">
+  <div>
+    <span class="badge">Available Now</span>
+    <h2>Self-Discovery Journal for First-Time Moms</h2>
+    <p style="margin:-.5rem 0 1rem;color:var(--muted)">Reflect, Record, and Reconnect with You · ★ 4.6 on Amazon</p>
+    <p class="tagline">Helping you find balance and joy in the biggest identity shift of your life.</p>
+    <div class="body">
+      <p>Guided prompts that help new mothers navigate identity shifts, postpartum realities, and the invisible work of running a household, with honesty and grace.</p>
+      <p>Written by a psychologist who spent years working with women on maternal mental health, it pairs clinical insight with space to think, feel, and write.</p>
+    </div>
+    <p style="margin-top:2rem"><!-- AMAZON: replace # with your Amazon link -->
+      <a class="btn" href="https://www.amazon.com/dp/164876956X" target="_blank" rel="noopener">Buy Now</a></p>
+    <div class="retail"><strong>Shopping in the U.S.</strong><a href="https://www.amazon.com/dp/164876956X" target="_blank" rel="noopener">Amazon</a></div>
+  </div>
+</div></section>
+
+<!-- BOOK 2 -->
+<section id="novel"><div class="wrap product flip">
+  <div class="cover" style="background:#F7F2EA;flex-direction:column;justify-content:space-between;padding:2.5rem 2rem;border:1px solid #e4dccf">
+    <small style="margin:0;color:#5E7F7A">A Novel</small>
+    <svg viewBox="0 0 200 200" width="70%" aria-hidden="true" style="margin:1rem auto"><circle cx="100" cy="100" r="88" fill="none" stroke="#5E7F7A" stroke-width="1.5"/><circle cx="100" cy="100" r="66" fill="none" stroke="#B9C9C6" stroke-width="1"/><circle cx="100" cy="100" r="44" fill="none" stroke="#D9C3B3" stroke-width="1"/><line x1="100" y1="100" x2="100" y2="34" stroke="#5E7F7A" stroke-width="2" stroke-linecap="round"/><line x1="100" y1="100" x2="146" y2="118" stroke="#B0654C" stroke-width="2" stroke-linecap="round"/><circle cx="100" cy="100" r="4" fill="#5E7F7A"/></svg>
+    <span style="color:#2F2A27;font-size:1.9rem">A Love Outside of Time</span>
+    <small style="margin-top:1.25rem;color:#2F2A27;letter-spacing:.2em">Sarah Griesemer</small>
+  </div>
+  <div>
+    <span class="badge">Coming Soon</span>
+    <h2>A Love Outside of Time</h2>
+    <p class="tagline">A woman who survives dystopian Minneapolis by never stopping is trapped in a timeless space with the man she loves, and must change the future to save him.</p>
+    <div class="body">
+      <p>Luz has survived a dystopian Minneapolis by never standing still, that is until she's trapped outside of time and falls for Mikhail, a man from the future. When a stranger arrives demanding Luz rewrite the future or lose him, she must decide what love is worth.</p>
+    </div>
+    <p style="margin-top:2rem"><a class="btn ghost" href="#contact">Agents &amp; Editors: Get in Touch</a></p>
+  </div>
+</div></section>
+
+<!-- ESSAYS -->
+<section id="essays"><div class="wrap">
+  <p class="eyebrow">Essays &amp; Memoir</p>
+  <h2>On anger, caretaking &amp; power.</h2>
+  <div class="body" style="max-width:720px">
+    <p>Personal essays exploring domestic inequity, women's anger, and the caretaking scripts we inherit. Who gets to be furious, and who learns to smooth things over instead? Sarah's essays are honed through workshops including <em>Hippocampus</em>.</p>
+    <!-- ESSAYS: add links here, e.g. <p><a href="URL">Essay Title</a> — Magazine Name</p> -->
+    <p><em>Published essays coming soon.</em></p>
+  </div>
+</div></section>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap">
+  <p class="eyebrow">About</p>
+  <h2>Meet Sarah</h2>
+  <div class="about">
+    <div class="body">
+      <p>Sarah Griesemer is a psychologist, writer, and author examining how we absorb cultural rules around gender, anger, and caretaking. She began her career in child development before specializing in adult therapy and collaborative assessment, and she brings that developmental ear to her essays and fiction.</p>
+      <p>For years she led training groups for therapists on gender, maternal caretaking, and women's anger. Her writing looks at how women learn to manage and placate rather than risk confrontation.</p>
+      <p>She is the author of <em>Self-Discovery Journal for First-Time Moms</em> and the founder of <em>The Book Shrink</em>, where she reviews contemporary fiction through a psychologist's lens.</p>
+    </div>
+    <blockquote class="quote">"I wrote my first children's book at age nine, and my grandmother helped me try to get it published. She took my words seriously before anyone else did. I've been writing ever since."</blockquote>
+  </div>
+</div></section>
+
+<!-- BOOK SHRINK -->
+<section class="shrink" id="bookshrink"><div class="wrap product">
+  <img src="laptop.jpg" alt="Sarah holding a laptop and smiling" style="max-width:420px;margin:0 auto">
+  <div>
+    <p class="eyebrow">Book Reviews</p>
+    <h2>The Book Shrink</h2>
+    <p>Fiction read through a clinical psychologist's lens. Sarah looks past the publisher hype to the assumptions about race, gender, and power inside the stories we love.</p>
+    <ul>
+      <li>Reviews that read for craft and power</li>
+      <li><em>The Deep Cut</em> spoiler analyses</li>
+      <li>Reader guides for book clubs</li>
+    </ul>
+    <a class="btn" href="https://thebookshrink.lovable.app" target="_blank" rel="noopener">Visit The Book Shrink ↗</a>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="wrap">
+  <p class="eyebrow">Contact</p>
+  <h2>Get in touch</h2>
+  <p>For literary representation, editorial pitches, and media requests.</p>
+  <!-- FORMSPREE: replace YOUR_FORM_ID with your Formspree code -->
+  <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div><label for="name">Name</label><input id="name" name="name" required></div>
+    <div><label for="email">Email</label><input id="email" type="email" name="email" required></div>
+    <div><label for="topic">Reason</label>
+      <select id="topic" name="topic">
+        <option>Literary representation</option>
+        <option>Editorial pitch / essay</option>
+        <option>Media or interview</option>
+        <option>Something else</option>
+      </select></div>
+    <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+    <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div><button class="btn" type="submit">Send Message</button></div>
+    <p id="form-status" role="status"></p>
+  </form>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <nav><a href="#journal">The Journal</a><a href="#novel">The Novel</a><a href="#about">About</a><a href="https://thebookshrink.lovable.app" target="_blank" rel="noopener">The Book Shrink ↗</a></nav>
+  <span>© <span id="yr"></span> Sarah Griesemer · <a href="#top">Back to top ↑</a></span>
+</div></footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const f = document.getElementById('contact-form'), s = document.getElementById('form-status');
+  f.addEventListener('submit', async e => {
+    e.preventDefault(); s.textContent = 'Sending…';
+    try {
+      const r = await fetch(f.action, {method:'POST', body:new FormData(f), headers:{Accept:'application/json'}});
+      if (r.ok) { f.reset(); s.textContent = 'Thank you! Your message was sent.'; }
+      else s.textContent = 'Sorry, something went wrong. Please try again later.';
+    } catch { s.textContent = 'Sorry, something went wrong. Please try again later.'; }
+  });
+</script>
+</body>
+</html>
